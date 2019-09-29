@@ -36,6 +36,10 @@
 
 #include "types.h"
 
+#ifdef _SYS__TIMESPEC_H_
+#define __timespec_defined
+#endif
+
 /*
  * assume "struct timespec" is not defined if st_mtime is not defined
  */

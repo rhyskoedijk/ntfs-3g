@@ -50,6 +50,19 @@
 #include <sys/sysmacros.h>
 #endif
 
+#ifndef MINORBITS
+#define MINORBITS       20
+#endif
+#ifndef MINORMASK
+#define MINORMASK       ((1U << MINORBITS) - 1)
+#endif
+#ifndef major
+#define major(dev)      ((unsigned int) ((dev) >> MINORBITS))
+#endif
+#ifndef minor
+#define minor(dev)      ((unsigned int) ((dev) & MINORMASK))
+#endif
+
 #include "param.h"
 #include "types.h"
 #include "debug.h"
