@@ -446,8 +446,9 @@
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 #undef size_t
 
-/* TODO: Fix this properly... */
+/* <time.h> */
 #define __timespec_defined 1
+/* <sysmacros.h> */
 #define MINORBITS       20
 #define MINORMASK       ((1U << MINORBITS) - 1)
 #define major(dev)      ((unsigned int) ((dev) >> MINORBITS))
