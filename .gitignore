@@ -1,1 +1,15 @@
+.*
+*.la
+*.a
+*.lo
+*.o
+*.so
+*.8
+*.pc
 *.code-workspace
+Makefile
+config.h
+config.log
+config.status
+stamp-h1
+libtool
